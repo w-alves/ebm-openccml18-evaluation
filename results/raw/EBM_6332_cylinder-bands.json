@@ -1,0 +1,27 @@
+{
+  "model_name": "EBM",
+  "accuracy": 0.808641975308642,
+  "auc_ovo": 0.8867334167709637,
+  "cross_entropy": 0.4240991730865218,
+  "tuning_time": 640.5842141319999,
+  "training_time": 8.234349622000082,
+  "prediction_time": 0.0012539090000700526,
+  "total_time": 648.8198176630001,
+  "best_params": {
+    "max_bins": 64,
+    "interactions": 10,
+    "learning_rate": 0.05,
+    "max_interaction_bins": 32,
+    "outer_bags": 16,
+    "inner_bags": 0,
+    "min_samples_leaf": 2,
+    "max_leaves": 3
+  },
+  "dataset_name": "dataset_6332_cylinder-bands",
+  "dataset_n_features": 67,
+  "dataset_n_classes": 2,
+  "train_samples": 378,
+  "test_samples": 162,
+  "experiment_timestamp": "2025-05-29T11:15:46.133547",
+  "environment": "ml_modern_py311"
+}

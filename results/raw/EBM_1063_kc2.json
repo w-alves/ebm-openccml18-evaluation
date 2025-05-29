@@ -1,0 +1,27 @@
+{
+  "model_name": "EBM",
+  "accuracy": 0.8152866242038217,
+  "auc_ovo": 0.767625,
+  "cross_entropy": 0.4565465283340068,
+  "tuning_time": 310.64074008800003,
+  "training_time": 3.4608071440000003,
+  "prediction_time": 0.0004935679999107379,
+  "total_time": 314.10204079999994,
+  "best_params": {
+    "max_bins": 128,
+    "interactions": 5,
+    "learning_rate": 0.05,
+    "max_interaction_bins": 32,
+    "outer_bags": 16,
+    "inner_bags": 0,
+    "min_samples_leaf": 2,
+    "max_leaves": 3
+  },
+  "dataset_name": "dataset_1063_kc2",
+  "dataset_n_features": 21,
+  "dataset_n_classes": 2,
+  "train_samples": 365,
+  "test_samples": 157,
+  "experiment_timestamp": "2025-05-29T11:11:14.914322",
+  "environment": "ml_modern_py311"
+}

@@ -1,0 +1,4 @@
+dataset_id,name,original_shape,processed_shape,n_classes,status
+1063,kc2,"(522, 21)","(522, 21)",2,success
+23381,dresses-sales,"(500, 12)","(500, 33)",2,success
+6332,cylinder-bands,"(540, 37)","(540, 67)",2,success

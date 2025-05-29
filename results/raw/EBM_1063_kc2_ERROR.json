@@ -1,0 +1,7 @@
+{
+  "model_name": "EBM",
+  "dataset_name": "dataset_1063_kc2",
+  "error": "No module named 'autosklearn'",
+  "experiment_timestamp": "2025-05-29T09:24:10.915925",
+  "environment": "ml_modern_py311"
+}

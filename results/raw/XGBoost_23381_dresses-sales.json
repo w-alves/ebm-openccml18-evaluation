@@ -1,0 +1,27 @@
+{
+  "model_name": "XGBoost",
+  "accuracy": 0.5466666666666666,
+  "auc_ovo": 0.5307425652253239,
+  "cross_entropy": 1.1402895058136937,
+  "tuning_time": 341.1603112339999,
+  "training_time": 2.3607647650001127,
+  "prediction_time": 0.01117188500006705,
+  "total_time": 343.53224788400007,
+  "best_params": {
+    "n_estimators": 200,
+    "max_depth": 6,
+    "subsample": 0.9,
+    "reg_alpha": 0.1,
+    "colsample_bytree": 0.9,
+    "colsample_bylevel": 0.9,
+    "min_child_weight": 3,
+    "gamma": 0.1,
+    "reg_lambda": 0.1
+  },
+  "dataset_name": "dataset_23381_dresses-sales",
+  "dataset_n_features": 33,
+  "dataset_n_classes": 2,
+  "train_samples": 350,
+  "test_samples": 150,
+  "experiment_timestamp": "2025-05-28T13:22:02.300246"
+}

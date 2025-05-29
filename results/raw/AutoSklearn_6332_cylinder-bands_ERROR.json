@@ -1,0 +1,7 @@
+{
+  "model_name": "AutoSklearn",
+  "dataset_name": "dataset_6332_cylinder-bands",
+  "error": "No module named 'interpret'",
+  "experiment_timestamp": "2025-05-29T09:24:18.403406",
+  "environment": "ml_autosklearn_py38"
+}

@@ -1,0 +1,7 @@
+{
+  "model_name": "AutoSklearn",
+  "dataset_name": "dataset_1063_kc2",
+  "error": "__init__() got an unexpected keyword argument 'random_state'",
+  "experiment_timestamp": "2025-05-29T09:24:48.858672",
+  "environment": "ml_autosklearn_py38"
+}

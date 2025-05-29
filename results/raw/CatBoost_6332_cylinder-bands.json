@@ -1,0 +1,26 @@
+{
+  "model_name": "CatBoost",
+  "accuracy": 0.8271604938271605,
+  "auc_ovo": 0.8850125156445557,
+  "cross_entropy": 0.4091427080331498,
+  "tuning_time": 121.94916268099996,
+  "training_time": 2.221813253999926,
+  "prediction_time": 0.01803902599999674,
+  "total_time": 124.18901496099988,
+  "best_params": {
+    "iterations": 500,
+    "depth": 6,
+    "l2_leaf_reg": 3,
+    "bootstrap_type": "Bernoulli",
+    "border_count": 64,
+    "random_strength": 10,
+    "grow_policy": "SymmetricTree"
+  },
+  "dataset_name": "dataset_6332_cylinder-bands",
+  "dataset_n_features": 67,
+  "dataset_n_classes": 2,
+  "train_samples": 378,
+  "test_samples": 162,
+  "experiment_timestamp": "2025-05-29T11:11:50.848810",
+  "environment": "ml_modern_py311"
+}

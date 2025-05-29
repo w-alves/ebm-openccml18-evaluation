@@ -1,0 +1,31 @@
+{
+  "model_name": "LightGBM",
+  "accuracy": 0.8271604938271605,
+  "auc_ovo": 0.886107634543179,
+  "cross_entropy": 0.47137196662624736,
+  "tuning_time": 1792.885819483,
+  "training_time": 17.55658707199973,
+  "prediction_time": 0.04006244299989703,
+  "total_time": 1810.4824689979996,
+  "best_params": {
+    "n_estimators": 200,
+    "max_depth": 5,
+    "num_leaves": 31,
+    "reg_alpha": 0.0,
+    "feature_fraction": 0.9,
+    "bagging_fraction": 0.9,
+    "bagging_freq": 5,
+    "min_child_samples": 10,
+    "min_child_weight": 0.001,
+    "reg_lambda": 0.1,
+    "objective": "binary",
+    "metric": "binary_logloss"
+  },
+  "dataset_name": "dataset_6332_cylinder-bands",
+  "dataset_n_features": 67,
+  "dataset_n_classes": 2,
+  "train_samples": 378,
+  "test_samples": 162,
+  "experiment_timestamp": "2025-05-29T11:36:53.869209",
+  "environment": "ml_modern_py311"
+}

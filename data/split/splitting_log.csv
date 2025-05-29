@@ -1,0 +1,4 @@
+dataset_id,name,total_samples,train_samples,test_samples,n_features,n_classes,train_class_distribution,test_class_distribution,status
+1063,kc2,522,365,157,21,2,"{0: 290, 1: 75}","{0: 125, 1: 32}",success
+23381,dresses-sales,500,350,150,33,2,"{0: 203, 1: 147}","{0: 87, 1: 63}",success
+6332,cylinder-bands,540,378,162,67,2,"{0: 160, 1: 218}","{0: 68, 1: 94}",success

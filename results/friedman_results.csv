@@ -1,0 +1,5 @@
+metric,friedman_statistic,friedman_pvalue,friedman_significant,n_datasets,n_models
+accuracy,10.679611650485429,0.05811568753668785,False,3,6
+auc_ovo,9.666666666666657,0.08525020077588899,False,3,6
+cross_entropy,6.80952380952381,0.23519605163635354,False,3,6
+total_time,7.0,0.22064030793671066,False,3,6

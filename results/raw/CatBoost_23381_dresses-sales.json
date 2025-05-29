@@ -1,0 +1,26 @@
+{
+  "model_name": "CatBoost",
+  "accuracy": 0.6133333333333333,
+  "auc_ovo": 0.5526363802225871,
+  "cross_entropy": 0.6754520131388321,
+  "tuning_time": 45.479522305000046,
+  "training_time": 0.29195663399991645,
+  "prediction_time": 0.005160136000085913,
+  "total_time": 45.77663907500005,
+  "best_params": {
+    "iterations": 200,
+    "depth": 4,
+    "l2_leaf_reg": 5,
+    "bootstrap_type": "Bayesian",
+    "border_count": 64,
+    "random_strength": 10,
+    "grow_policy": "SymmetricTree"
+  },
+  "dataset_name": "dataset_23381_dresses-sales",
+  "dataset_n_features": 33,
+  "dataset_n_classes": 2,
+  "train_samples": 350,
+  "test_samples": 150,
+  "experiment_timestamp": "2025-05-29T11:04:50.188233",
+  "environment": "ml_modern_py311"
+}

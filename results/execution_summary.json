@@ -1,0 +1,171 @@
+{
+  "total_experiments": 18,
+  "successful": 0,
+  "failed": 18,
+  "success_rate": 0.0,
+  "execution_timestamp": "2025-05-29T09:24:23.120485",
+  "experiments": [
+    {
+      "status": "failed",
+      "model_name": "AutoSklearn",
+      "dataset_name": "dataset_1063_kc2",
+      "environment": "ml_autosklearn_py38",
+      "execution_time": 3.381216287612915,
+      "error": "2025-05-29 09:24:05,820 - AutoSklearn - INFO - Starting experiment: AutoSklearn on dataset_1063_kc2\n2025-05-29 09:24:05,821 - AutoSklearn - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:05,821 - AutoSklearn - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_autosklearn_py38/lib/python38.zip']\n2025-05-29 09:24:06,343 - AutoSklearn - ERROR - Error in experiment AutoSklearn on dataset_1063_kc2: No module named 'interpret'\n2025-05-29 09:24:06,343 - AutoSklearn - ERROR - Exception details: ModuleNotFoundError: No module named 'interpret'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_AutoSklearn_1063_kc2.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_AutoSklearn_1063_kc2.py\", line 67, in main\n    from models.autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 6, in <module>\n    from .ebm_model import EBMModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/ebm_model.py\", line 8, in <module>\n    from interpret.glassbox import ExplainableBoostingClassifier\nModuleNotFoundError: No module named 'interpret'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "XGBoost",
+      "dataset_name": "dataset_1063_kc2",
+      "environment": "ml_modern_py311",
+      "execution_time": 3.8792316913604736,
+      "error": "2025-05-29 09:24:05,188 - XGBoost - INFO - Starting experiment: XGBoost on dataset_1063_kc2\n2025-05-29 09:24:05,189 - XGBoost - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:05,189 - XGBoost - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:06,629 - XGBoost - ERROR - Error in experiment XGBoost on dataset_1063_kc2: No module named 'autosklearn'\n2025-05-29 09:24:06,629 - XGBoost - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_XGBoost_1063_kc2.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_XGBoost_1063_kc2.py\", line 73, in main\n    from models.xgboost_model import XGBoostModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "AutoGluon",
+      "dataset_name": "dataset_1063_kc2",
+      "environment": "ml_modern_py311",
+      "execution_time": 3.918656349182129,
+      "error": "2025-05-29 09:24:05,239 - AutoGluon - INFO - Starting experiment: AutoGluon on dataset_1063_kc2\n2025-05-29 09:24:05,243 - AutoGluon - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:05,244 - AutoGluon - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:06,662 - AutoGluon - ERROR - Error in experiment AutoGluon on dataset_1063_kc2: No module named 'autosklearn'\n2025-05-29 09:24:06,663 - AutoGluon - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_AutoGluon_1063_kc2.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_AutoGluon_1063_kc2.py\", line 70, in main\n    from models.autogluon_model import AutoGluonModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "LightGBM",
+      "dataset_name": "dataset_1063_kc2",
+      "environment": "ml_modern_py311",
+      "execution_time": 4.000018119812012,
+      "error": "2025-05-29 09:24:05,337 - LightGBM - INFO - Starting experiment: LightGBM on dataset_1063_kc2\n2025-05-29 09:24:05,338 - LightGBM - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:05,338 - LightGBM - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:06,731 - LightGBM - ERROR - Error in experiment LightGBM on dataset_1063_kc2: No module named 'autosklearn'\n2025-05-29 09:24:06,732 - LightGBM - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_LightGBM_1063_kc2.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_LightGBM_1063_kc2.py\", line 76, in main\n    from models.lgbm_model import LGBMModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "AutoSklearn",
+      "dataset_name": "dataset_23381_dresses-sales",
+      "environment": "ml_autosklearn_py38",
+      "execution_time": 3.604508399963379,
+      "error": "2025-05-29 09:24:09,980 - AutoSklearn - INFO - Starting experiment: AutoSklearn on dataset_23381_dresses-sales\n2025-05-29 09:24:09,981 - AutoSklearn - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:09,981 - AutoSklearn - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_autosklearn_py38/lib/python38.zip']\n2025-05-29 09:24:10,492 - AutoSklearn - ERROR - Error in experiment AutoSklearn on dataset_23381_dresses-sales: No module named 'interpret'\n2025-05-29 09:24:10,492 - AutoSklearn - ERROR - Exception details: ModuleNotFoundError: No module named 'interpret'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_AutoSklearn_23381_dresses-sales.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_AutoSklearn_23381_dresses-sales.py\", line 67, in main\n    from models.autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 6, in <module>\n    from .ebm_model import EBMModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/ebm_model.py\", line 8, in <module>\n    from interpret.glassbox import ExplainableBoostingClassifier\nModuleNotFoundError: No module named 'interpret'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "CatBoost",
+      "dataset_name": "dataset_1063_kc2",
+      "environment": "ml_modern_py311",
+      "execution_time": 4.26641583442688,
+      "error": "2025-05-29 09:24:08,868 - CatBoost - INFO - Starting experiment: CatBoost on dataset_1063_kc2\n2025-05-29 09:24:08,868 - CatBoost - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:08,868 - CatBoost - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:10,364 - CatBoost - ERROR - Error in experiment CatBoost on dataset_1063_kc2: No module named 'autosklearn'\n2025-05-29 09:24:10,365 - CatBoost - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_CatBoost_1063_kc2.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_CatBoost_1063_kc2.py\", line 79, in main\n    from models.catboost_model import CatBoostModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "EBM",
+      "dataset_name": "dataset_1063_kc2",
+      "environment": "ml_modern_py311",
+      "execution_time": 4.286524772644043,
+      "error": "2025-05-29 09:24:09,394 - EBM - INFO - Starting experiment: EBM on dataset_1063_kc2\n2025-05-29 09:24:09,394 - EBM - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:09,394 - EBM - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:10,915 - EBM - ERROR - Error in experiment EBM on dataset_1063_kc2: No module named 'autosklearn'\n2025-05-29 09:24:10,915 - EBM - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_EBM_1063_kc2.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_EBM_1063_kc2.py\", line 82, in main\n    from models.ebm_model import EBMModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "AutoGluon",
+      "dataset_name": "dataset_23381_dresses-sales",
+      "environment": "ml_modern_py311",
+      "execution_time": 4.220515966415405,
+      "error": "2025-05-29 09:24:09,482 - AutoGluon - INFO - Starting experiment: AutoGluon on dataset_23381_dresses-sales\n2025-05-29 09:24:09,485 - AutoGluon - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:09,485 - AutoGluon - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:10,965 - AutoGluon - ERROR - Error in experiment AutoGluon on dataset_23381_dresses-sales: No module named 'autosklearn'\n2025-05-29 09:24:10,966 - AutoGluon - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_AutoGluon_23381_dresses-sales.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_AutoGluon_23381_dresses-sales.py\", line 70, in main\n    from models.autogluon_model import AutoGluonModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "XGBoost",
+      "dataset_name": "dataset_23381_dresses-sales",
+      "environment": "ml_modern_py311",
+      "execution_time": 4.3271050453186035,
+      "error": "2025-05-29 09:24:12,942 - XGBoost - INFO - Starting experiment: XGBoost on dataset_23381_dresses-sales\n2025-05-29 09:24:12,943 - XGBoost - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:12,943 - XGBoost - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:14,602 - XGBoost - ERROR - Error in experiment XGBoost on dataset_23381_dresses-sales: No module named 'autosklearn'\n2025-05-29 09:24:14,603 - XGBoost - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_XGBoost_23381_dresses-sales.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_XGBoost_23381_dresses-sales.py\", line 73, in main\n    from models.xgboost_model import XGBoostModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "LightGBM",
+      "dataset_name": "dataset_23381_dresses-sales",
+      "environment": "ml_modern_py311",
+      "execution_time": 4.319961309432983,
+      "error": "2025-05-29 09:24:13,129 - LightGBM - INFO - Starting experiment: LightGBM on dataset_23381_dresses-sales\n2025-05-29 09:24:13,130 - LightGBM - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:13,130 - LightGBM - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:14,730 - LightGBM - ERROR - Error in experiment LightGBM on dataset_23381_dresses-sales: No module named 'autosklearn'\n2025-05-29 09:24:14,731 - LightGBM - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_LightGBM_23381_dresses-sales.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_LightGBM_23381_dresses-sales.py\", line 76, in main\n    from models.lgbm_model import LGBMModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "CatBoost",
+      "dataset_name": "dataset_23381_dresses-sales",
+      "environment": "ml_modern_py311",
+      "execution_time": 4.243549108505249,
+      "error": "2025-05-29 09:24:13,769 - CatBoost - INFO - Starting experiment: CatBoost on dataset_23381_dresses-sales\n2025-05-29 09:24:13,769 - CatBoost - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:13,770 - CatBoost - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:15,160 - CatBoost - ERROR - Error in experiment CatBoost on dataset_23381_dresses-sales: No module named 'autosklearn'\n2025-05-29 09:24:15,160 - CatBoost - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_CatBoost_23381_dresses-sales.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_CatBoost_23381_dresses-sales.py\", line 79, in main\n    from models.catboost_model import CatBoostModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "EBM",
+      "dataset_name": "dataset_23381_dresses-sales",
+      "environment": "ml_modern_py311",
+      "execution_time": 4.2203123569488525,
+      "error": "2025-05-29 09:24:13,810 - EBM - INFO - Starting experiment: EBM on dataset_23381_dresses-sales\n2025-05-29 09:24:13,810 - EBM - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:13,810 - EBM - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:15,183 - EBM - ERROR - Error in experiment EBM on dataset_23381_dresses-sales: No module named 'autosklearn'\n2025-05-29 09:24:15,184 - EBM - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_EBM_23381_dresses-sales.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_EBM_23381_dresses-sales.py\", line 82, in main\n    from models.ebm_model import EBMModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "AutoSklearn",
+      "dataset_name": "dataset_6332_cylinder-bands",
+      "environment": "ml_autosklearn_py38",
+      "execution_time": 3.59529447555542,
+      "error": "2025-05-29 09:24:17,590 - AutoSklearn - INFO - Starting experiment: AutoSklearn on dataset_6332_cylinder-bands\n2025-05-29 09:24:17,590 - AutoSklearn - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:17,591 - AutoSklearn - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_autosklearn_py38/lib/python38.zip']\n2025-05-29 09:24:18,402 - AutoSklearn - ERROR - Error in experiment AutoSklearn on dataset_6332_cylinder-bands: No module named 'interpret'\n2025-05-29 09:24:18,403 - AutoSklearn - ERROR - Exception details: ModuleNotFoundError: No module named 'interpret'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_AutoSklearn_6332_cylinder-bands.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_AutoSklearn_6332_cylinder-bands.py\", line 67, in main\n    from models.autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 6, in <module>\n    from .ebm_model import EBMModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/ebm_model.py\", line 8, in <module>\n    from interpret.glassbox import ExplainableBoostingClassifier\nModuleNotFoundError: No module named 'interpret'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "AutoGluon",
+      "dataset_name": "dataset_6332_cylinder-bands",
+      "environment": "ml_modern_py311",
+      "execution_time": 4.383673429489136,
+      "error": "2025-05-29 09:24:17,368 - AutoGluon - INFO - Starting experiment: AutoGluon on dataset_6332_cylinder-bands\n2025-05-29 09:24:17,369 - AutoGluon - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:17,369 - AutoGluon - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:19,092 - AutoGluon - ERROR - Error in experiment AutoGluon on dataset_6332_cylinder-bands: No module named 'autosklearn'\n2025-05-29 09:24:19,092 - AutoGluon - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_AutoGluon_6332_cylinder-bands.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_AutoGluon_6332_cylinder-bands.py\", line 70, in main\n    from models.autogluon_model import AutoGluonModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "XGBoost",
+      "dataset_name": "dataset_6332_cylinder-bands",
+      "environment": "ml_modern_py311",
+      "execution_time": 4.553377151489258,
+      "error": "2025-05-29 09:24:18,176 - XGBoost - INFO - Starting experiment: XGBoost on dataset_6332_cylinder-bands\n2025-05-29 09:24:18,177 - XGBoost - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:18,177 - XGBoost - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:19,615 - XGBoost - ERROR - Error in experiment XGBoost on dataset_6332_cylinder-bands: No module named 'autosklearn'\n2025-05-29 09:24:19,616 - XGBoost - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_XGBoost_6332_cylinder-bands.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_XGBoost_6332_cylinder-bands.py\", line 73, in main\n    from models.xgboost_model import XGBoostModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "LightGBM",
+      "dataset_name": "dataset_6332_cylinder-bands",
+      "environment": "ml_modern_py311",
+      "execution_time": 4.577068090438843,
+      "error": "2025-05-29 09:24:18,162 - LightGBM - INFO - Starting experiment: LightGBM on dataset_6332_cylinder-bands\n2025-05-29 09:24:18,163 - LightGBM - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:18,163 - LightGBM - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:19,663 - LightGBM - ERROR - Error in experiment LightGBM on dataset_6332_cylinder-bands: No module named 'autosklearn'\n2025-05-29 09:24:19,663 - LightGBM - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_LightGBM_6332_cylinder-bands.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_LightGBM_6332_cylinder-bands.py\", line 76, in main\n    from models.lgbm_model import LGBMModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "CatBoost",
+      "dataset_name": "dataset_6332_cylinder-bands",
+      "environment": "ml_modern_py311",
+      "execution_time": 3.849872589111328,
+      "error": "2025-05-29 09:24:20,867 - CatBoost - INFO - Starting experiment: CatBoost on dataset_6332_cylinder-bands\n2025-05-29 09:24:20,868 - CatBoost - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:20,868 - CatBoost - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:22,124 - CatBoost - ERROR - Error in experiment CatBoost on dataset_6332_cylinder-bands: No module named 'autosklearn'\n2025-05-29 09:24:22,124 - CatBoost - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_CatBoost_6332_cylinder-bands.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_CatBoost_6332_cylinder-bands.py\", line 79, in main\n    from models.catboost_model import CatBoostModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    },
+    {
+      "status": "failed",
+      "model_name": "EBM",
+      "dataset_name": "dataset_6332_cylinder-bands",
+      "environment": "ml_modern_py311",
+      "execution_time": 3.688965082168579,
+      "error": "2025-05-29 09:24:21,647 - EBM - INFO - Starting experiment: EBM on dataset_6332_cylinder-bands\n2025-05-29 09:24:21,647 - EBM - INFO - Working directory: /mnt/c/Users/wrfrs/mestrado2\n2025-05-29 09:24:21,648 - EBM - INFO - Python path: ['/mnt/c/Users/wrfrs/mestrado2', '/tmp/ml_experiments__2d0rye1', '/home/wesley/miniconda3/envs/ml_modern_py311/lib/python311.zip']\n2025-05-29 09:24:22,819 - EBM - ERROR - Error in experiment EBM on dataset_6332_cylinder-bands: No module named 'autosklearn'\n2025-05-29 09:24:22,820 - EBM - ERROR - Exception details: ModuleNotFoundError: No module named 'autosklearn'\nTraceback (most recent call last):\n  File \"/tmp/ml_experiments__2d0rye1/exp_EBM_6332_cylinder-bands.py\", line 163, in <module>\n    main()\n  File \"/tmp/ml_experiments__2d0rye1/exp_EBM_6332_cylinder-bands.py\", line 82, in main\n    from models.ebm_model import EBMModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/__init__.py\", line 10, in <module>\n    from .autosklearn_model import AutoSklearnModel\n  File \"/mnt/c/Users/wrfrs/mestrado2/models/autosklearn_model.py\", line 8, in <module>\n    import autosklearn.classification\nModuleNotFoundError: No module named 'autosklearn'\n",
+      "exit_code": 1
+    }
+  ]
+}

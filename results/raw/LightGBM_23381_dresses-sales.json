@@ -1,0 +1,31 @@
+{
+  "model_name": "LightGBM",
+  "accuracy": 0.56,
+  "auc_ovo": 0.5258164568509396,
+  "cross_entropy": 1.2406150010856971,
+  "tuning_time": 2791.63149512,
+  "training_time": 6.756274269000187,
+  "prediction_time": 0.012565816000005725,
+  "total_time": 2798.4003352050004,
+  "best_params": {
+    "n_estimators": 200,
+    "max_depth": 7,
+    "num_leaves": 31,
+    "reg_alpha": 0.0,
+    "feature_fraction": 0.9,
+    "bagging_fraction": 0.9,
+    "bagging_freq": 5,
+    "min_child_samples": 10,
+    "min_child_weight": 0.001,
+    "reg_lambda": 0.1,
+    "objective": "binary",
+    "metric": "binary_logloss"
+  },
+  "dataset_name": "dataset_23381_dresses-sales",
+  "dataset_n_features": 33,
+  "dataset_n_classes": 2,
+  "train_samples": 350,
+  "test_samples": 150,
+  "experiment_timestamp": "2025-05-29T11:54:58.635889",
+  "environment": "ml_modern_py311"
+}

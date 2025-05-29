@@ -1,0 +1,23 @@
+{
+  "model_name": "AutoGluon",
+  "accuracy": 0.808641975308642,
+  "auc_ovo": 0.8598247809762203,
+  "cross_entropy": 0.49452706610020003,
+  "tuning_time": 0.0003230259999327245,
+  "training_time": 204.32063105399993,
+  "prediction_time": 0.9587360630000603,
+  "total_time": 205.27969014299993,
+  "best_params": {
+    "time_limit": 180,
+    "presets": "medium_quality_faster_train",
+    "num_bag_folds": 3,
+    "num_stack_levels": 1
+  },
+  "dataset_name": "dataset_6332_cylinder-bands",
+  "dataset_n_features": 67,
+  "dataset_n_classes": 2,
+  "train_samples": 378,
+  "test_samples": 162,
+  "experiment_timestamp": "2025-05-29T11:07:43.294992",
+  "environment": "ml_modern_py311"
+}

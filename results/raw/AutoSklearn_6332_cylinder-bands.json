@@ -1,0 +1,23 @@
+{
+  "model_name": "AutoSklearn",
+  "accuracy": 0.42592592592592593,
+  "auc_ovo": 0.5,
+  "cross_entropy": 0.6931471805599453,
+  "tuning_time": 0.00010658600012902752,
+  "training_time": 277.30224152200003,
+  "prediction_time": 0.00021948800008431135,
+  "total_time": 277.30256759600024,
+  "best_params": {
+    "time_left_for_this_task": 300,
+    "per_run_time_limit": 30,
+    "ensemble_size": 10,
+    "ensemble_nbest": 10
+  },
+  "dataset_name": "dataset_6332_cylinder-bands",
+  "dataset_n_features": 67,
+  "dataset_n_classes": 2,
+  "train_samples": 378,
+  "test_samples": 162,
+  "experiment_timestamp": "2025-05-29T11:16:44.330750",
+  "environment": "ml_autosklearn_py38"
+}

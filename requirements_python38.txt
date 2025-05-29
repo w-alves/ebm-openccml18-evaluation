@@ -1,0 +1,13 @@
+# Requirements for Python 3.8 environment (Auto-sklearn)
+auto-sklearn
+scikit-learn
+numpy
+pandas
+scipy
+joblib
+matplotlib
+seaborn
+tqdm
+psutil
+pytest
+pytest-cov 

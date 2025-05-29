@@ -1,0 +1,7 @@
+{
+  "model_name": "AutoGluon",
+  "dataset_name": "dataset_6332_cylinder-bands",
+  "error": "No module named 'autosklearn'",
+  "experiment_timestamp": "2025-05-29T09:24:19.093234",
+  "environment": "ml_modern_py311"
+}

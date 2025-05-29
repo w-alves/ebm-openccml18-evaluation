@@ -1,0 +1,23 @@
+{
+  "model_name": "AutoSklearn",
+  "accuracy": 0.5466666666666666,
+  "auc_ovo": 0.5,
+  "cross_entropy": 0.6931471805599454,
+  "tuning_time": 0.0002861329999177542,
+  "training_time": 279.7418082869999,
+  "prediction_time": 0.00017807400035962928,
+  "total_time": 279.7422724940002,
+  "best_params": {
+    "time_left_for_this_task": 300,
+    "per_run_time_limit": 30,
+    "ensemble_size": 10,
+    "ensemble_nbest": 10
+  },
+  "dataset_name": "dataset_23381_dresses-sales",
+  "dataset_n_features": 33,
+  "dataset_n_classes": 2,
+  "train_samples": 350,
+  "test_samples": 150,
+  "experiment_timestamp": "2025-05-29T11:22:08.856809",
+  "environment": "ml_autosklearn_py38"
+}

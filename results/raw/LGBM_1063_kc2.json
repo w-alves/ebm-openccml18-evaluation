@@ -1,0 +1,30 @@
+{
+  "model_name": "LGBM",
+  "accuracy": 0.7898089171974523,
+  "auc_ovo": 0.7013750000000001,
+  "cross_entropy": 0.79913992839537,
+  "tuning_time": 233.49044475200014,
+  "training_time": 1.3457418359998883,
+  "prediction_time": 0.0038439790000666108,
+  "total_time": 234.8400305670001,
+  "best_params": {
+    "n_estimators": 200,
+    "max_depth": 5,
+    "num_leaves": 31,
+    "reg_alpha": 0.0,
+    "feature_fraction": 0.9,
+    "bagging_fraction": 0.9,
+    "bagging_freq": 5,
+    "min_child_samples": 10,
+    "min_child_weight": 0.001,
+    "reg_lambda": 0.1,
+    "objective": "binary",
+    "metric": "binary_logloss"
+  },
+  "dataset_name": "dataset_1063_kc2",
+  "dataset_n_features": 21,
+  "dataset_n_classes": 2,
+  "train_samples": 365,
+  "test_samples": 157,
+  "experiment_timestamp": "2025-05-28T13:18:20.433236"
+}

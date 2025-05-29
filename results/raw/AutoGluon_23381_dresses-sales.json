@@ -1,0 +1,23 @@
+{
+  "model_name": "AutoGluon",
+  "accuracy": 0.62,
+  "auc_ovo": 0.5730706075533663,
+  "cross_entropy": 0.6704373443041615,
+  "tuning_time": 0.0001210469999932684,
+  "training_time": 223.89380090400005,
+  "prediction_time": 1.2902180399998997,
+  "total_time": 225.18413999099994,
+  "best_params": {
+    "time_limit": 180,
+    "presets": "medium_quality_faster_train",
+    "num_bag_folds": 3,
+    "num_stack_levels": 1
+  },
+  "dataset_name": "dataset_23381_dresses-sales",
+  "dataset_n_features": 33,
+  "dataset_n_classes": 2,
+  "train_samples": 350,
+  "test_samples": 150,
+  "experiment_timestamp": "2025-05-29T11:09:14.444842",
+  "environment": "ml_modern_py311"
+}

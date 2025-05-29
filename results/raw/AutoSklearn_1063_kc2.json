@@ -1,0 +1,23 @@
+{
+  "model_name": "AutoSklearn",
+  "accuracy": 0.554140127388535,
+  "auc_ovo": 0.5,
+  "cross_entropy": 0.6931471805599454,
+  "tuning_time": 0.00875633099985862,
+  "training_time": 286.55133638300003,
+  "prediction_time": 0.0001427400000011403,
+  "total_time": 286.5602354539999,
+  "best_params": {
+    "time_left_for_this_task": 300,
+    "per_run_time_limit": 30,
+    "ensemble_size": 10,
+    "ensemble_nbest": 10
+  },
+  "dataset_name": "dataset_1063_kc2",
+  "dataset_n_features": 21,
+  "dataset_n_classes": 2,
+  "train_samples": 365,
+  "test_samples": 157,
+  "experiment_timestamp": "2025-05-29T11:17:22.962758",
+  "environment": "ml_autosklearn_py38"
+}

@@ -1,0 +1,26 @@
+{
+  "model_name": "CatBoost",
+  "accuracy": 0.8280254777070064,
+  "auc_ovo": 0.7806249999999999,
+  "cross_entropy": 0.43943216900504567,
+  "tuning_time": 69.98337623800012,
+  "training_time": 0.42398126600005526,
+  "prediction_time": 0.012972021999985373,
+  "total_time": 70.42032952600016,
+  "best_params": {
+    "iterations": 200,
+    "depth": 4,
+    "l2_leaf_reg": 5,
+    "bootstrap_type": "Bayesian",
+    "border_count": 64,
+    "random_strength": 10,
+    "grow_policy": "SymmetricTree"
+  },
+  "dataset_name": "dataset_1063_kc2",
+  "dataset_n_features": 21,
+  "dataset_n_classes": 2,
+  "train_samples": 365,
+  "test_samples": 157,
+  "experiment_timestamp": "2025-05-29T11:05:17.691726",
+  "environment": "ml_modern_py311"
+}

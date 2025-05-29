@@ -1,0 +1,27 @@
+{
+  "model_name": "XGBoost",
+  "accuracy": 0.7962962962962963,
+  "auc_ovo": 0.8709324155193993,
+  "cross_entropy": 0.4815226177433145,
+  "tuning_time": 217.25536721599997,
+  "training_time": 1.7008192040000267,
+  "prediction_time": 0.002486142999941876,
+  "total_time": 218.95867256299994,
+  "best_params": {
+    "n_estimators": 200,
+    "max_depth": 4,
+    "subsample": 0.8,
+    "reg_alpha": 0,
+    "colsample_bytree": 0.9,
+    "colsample_bylevel": 0.9,
+    "min_child_weight": 3,
+    "gamma": 0.1,
+    "reg_lambda": 0.1
+  },
+  "dataset_name": "dataset_6332_cylinder-bands",
+  "dataset_n_features": 67,
+  "dataset_n_classes": 2,
+  "train_samples": 378,
+  "test_samples": 162,
+  "experiment_timestamp": "2025-05-28T13:23:18.613466"
+}

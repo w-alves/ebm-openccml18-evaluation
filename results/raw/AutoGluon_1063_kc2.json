@@ -1,0 +1,23 @@
+{
+  "model_name": "AutoGluon",
+  "accuracy": 0.8152866242038217,
+  "auc_ovo": 0.76375,
+  "cross_entropy": 0.41872803447433926,
+  "tuning_time": 0.0002586360001259891,
+  "training_time": 197.20417418500006,
+  "prediction_time": 0.6066189089999625,
+  "total_time": 197.81105173000014,
+  "best_params": {
+    "time_limit": 180,
+    "presets": "medium_quality_faster_train",
+    "num_bag_folds": 3,
+    "num_stack_levels": 1
+  },
+  "dataset_name": "dataset_1063_kc2",
+  "dataset_n_features": 21,
+  "dataset_n_classes": 2,
+  "train_samples": 365,
+  "test_samples": 157,
+  "experiment_timestamp": "2025-05-29T11:07:35.686987",
+  "environment": "ml_modern_py311"
+}
