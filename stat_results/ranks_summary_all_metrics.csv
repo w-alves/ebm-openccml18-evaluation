@@ -1,0 +1,8 @@
+,AutoGluon,AutoSklearn,CatBoost,EBM,LightGBM,XGBoost
+accuracy,6.0,2.0,1.0,3.0,4.0,5.0
+auc_ovo,4.0,3.0,1.0,2.0,5.0,6.0
+cross_entropy,3.0,6.0,2.0,1.0,5.0,4.0
+tuning_time,4.0,6.0,3.0,5.0,2.0,1.0
+training_time,4.0,6.0,3.0,5.0,2.0,1.0
+prediction_time,5.0,6.0,2.0,3.0,4.0,1.0
+total_time,4.0,6.0,3.0,5.0,2.0,1.0

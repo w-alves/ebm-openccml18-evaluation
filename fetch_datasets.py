@@ -56,11 +56,20 @@ def get_openml_cc18_smallest_datasets(n_datasets: int = 30) -> list:
     smallest_datasets = dataset_info[:n_datasets]
     
     logger.info(f"Selected {len(smallest_datasets)} smallest datasets:")
-    for i, ds in enumerate(smallest_datasets[:10]):  # Show first 10
-        logger.info(f"  {i+1}. {ds['name']} (ID: {ds['dataset_id']}) - "
-                   f"{ds['n_instances']} instances, {ds['n_features']} features")
-    if len(smallest_datasets) > 10:
-        logger.info(f"  ... and {len(smallest_datasets) - 10} more")
+    
+    # Print summary table
+    print("\nDataset Summary:")
+    print("=" * 80)
+    print(f"{'Dataset':<30} {'Features':<10} {'Instances':<12} {'Classes':<8}")
+    print("-" * 80)
+    
+    for ds in smallest_datasets:
+        dataset_name = ds['name'][:28] + ".." if len(ds['name']) > 30 else ds['name']
+        print(f"{dataset_name:<30} {ds['n_features']:<10} {ds['n_instances']:<12} {ds['n_classes']:<8}")
+    
+    print("-" * 80)
+    print(f"Total: {len(smallest_datasets)} datasets")
+    print()
     
     return [ds['dataset_id'] for ds in smallest_datasets]
 
@@ -76,7 +85,16 @@ def fetch_openml_dataset(dataset_id: int, data_dir: Path) -> bool:
         bool: True if successful, False otherwise
     """
     try:
-        # Fetch dataset
+        # First get dataset info to check filename
+        dataset = openml.datasets.get_dataset(dataset_id, download_data=False)
+        dataset_path = data_dir / f"dataset_{dataset_id}_{dataset.name.replace(' ', '_')}.pkl"
+        
+        # Check if dataset already exists
+        if dataset_path.exists():
+            logger.info(f"Dataset {dataset_id}: {dataset.name} already exists, skipping download")
+            return True
+        
+        # Fetch dataset data
         dataset = openml.datasets.get_dataset(dataset_id)
         X, y, categorical_indicator, attribute_names = dataset.get_data(
             dataset_format="dataframe", target=dataset.default_target_attribute
@@ -97,8 +115,7 @@ def fetch_openml_dataset(dataset_id: int, data_dir: Path) -> bool:
             'y': y
         }
         
-        # Save dataset
-        dataset_path = data_dir / f"dataset_{dataset_id}_{dataset.name.replace(' ', '_')}.pkl"
+        # Save dataset (path already defined above)
         with open(dataset_path, 'wb') as f:
             pickle.dump(dataset_info, f)
             
@@ -119,7 +136,7 @@ def main():
     logger.info("Starting dataset acquisition from OpenML-CC18 benchmark suite")
     
     # Get the 30 smallest datasets deterministically
-    smallest_dataset_ids = get_openml_cc18_smallest_datasets(3)
+    smallest_dataset_ids = get_openml_cc18_smallest_datasets(30)
     
     logger.info(f"Fetching {len(smallest_dataset_ids)} smallest datasets...")
     

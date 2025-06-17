@@ -1,0 +1,397 @@
+🚀 Starting Statistical Analysis of ML Experiment Results
+📥 Downloading results from gs://mestrado-461619-ml-experiments/results/raw/
+🔍 Found 180 result files
+✅ Successfully downloaded results for 6 models
+🔍 Extracting best performance from cross-validation results...
+
+🔍 Performing data sanity checks...
+📊 Total model+dataset combinations: 180
+
+📈 DATA COMPLETENESS SUMMARY:
+  accuracy: 180/180 (100.0%) ✅
+  auc_ovo: 180/180 (100.0%) ✅
+  cross_entropy: 180/180 (100.0%) ✅
+  tuning_time: 180/180 (100.0%) ✅
+  training_time: 180/180 (100.0%) ✅
+  prediction_time: 180/180 (100.0%) ✅
+  total_time: 180/180 (100.0%) ✅
+
+✅ All data looks good! No NaN values or missing metrics detected.
+📄 Detailed sanity check report saved to: stat_results/data_sanity_check_report.json
+📊 Creating performance matrices...
+📈 Found 6 models and 30 datasets
+✅ Performance matrices created
+
+================================================================================
+STATISTICAL ANALYSIS OF ML EXPERIMENT RESULTS
+================================================================================
+
+============================================================
+STATISTICAL ANALYSIS FOR ACCURACY
+============================================================
+
+Performance Summary for accuracy:
+       AutoGluon  AutoSklearn   CatBoost        EBM   LightGBM    XGBoost
+count  30.000000    30.000000  30.000000  30.000000  30.000000  30.000000
+mean    0.826036     0.838927   0.839985   0.837720   0.830121   0.826617
+std     0.173612     0.175564   0.165208   0.167505   0.175994   0.172272
+min     0.195801     0.188369   0.219112   0.215444   0.192085   0.202847
+25%     0.753363     0.760987   0.780170   0.764763   0.757625   0.755880
+50%     0.880358     0.905654   0.896819   0.888199   0.874914   0.878754
+75%     0.947973     0.966930   0.937831   0.955894   0.955850   0.944181
+max     0.996875     0.994915   0.997917   1.000000   0.994792   0.994792
+
+Performance Summary with 95% CI for accuracy:
+  AutoGluon: 0.8260 [95% CI: 0.7639 - 0.8882]
+  AutoSklearn: 0.8389 [95% CI: 0.7761 - 0.9018]
+  CatBoost: 0.8400 [95% CI: 0.7809 - 0.8991]
+  EBM: 0.8377 [95% CI: 0.7778 - 0.8977]
+  LightGBM: 0.8301 [95% CI: 0.7671 - 0.8931]
+  XGBoost: 0.8266 [95% CI: 0.7650 - 0.8883]
+
+Ranking Summary for accuracy (average ranks):
+  CatBoost: 2.450
+  EBM: 2.900
+  AutoSklearn: 3.217
+  LightGBM: 3.700
+  XGBoost: 4.250
+  AutoGluon: 4.483
+
+Friedman test results:
+  Statistic: 26.7782
+  p-value: 0.000063
+  Result: Significant differences detected (p < 0.05)
+  Critical difference plot saved as: stat_results/critical_difference_accuracy.png
+  Performance data saved to: stat_results/performance_scores_accuracy.csv
+  Ranking data saved to: stat_results/performance_ranks_accuracy.csv
+
+============================================================
+STATISTICAL ANALYSIS FOR AUC_OVO
+============================================================
+
+Performance Summary for auc_ovo:
+       AutoGluon  AutoSklearn   CatBoost        EBM   LightGBM    XGBoost
+count  30.000000    30.000000  30.000000  30.000000  30.000000  30.000000
+mean    0.883440     0.892226   0.896824   0.894939   0.882079   0.875721
+std     0.129211     0.129444   0.119855   0.121413   0.134886   0.137618
+min     0.552010     0.550293   0.580072   0.584184   0.548834   0.535681
+25%     0.818532     0.827013   0.861913   0.833303   0.806983   0.803498
+50%     0.925363     0.942465   0.933686   0.938927   0.930682   0.924325
+75%     0.991871     0.994520   0.992465   0.993835   0.991407   0.990568
+max     1.000000     1.000000   1.000000   1.000000   0.999778   0.999868
+
+Performance Summary with 95% CI for auc_ovo:
+  AutoGluon: 0.8834 [95% CI: 0.8372 - 0.9297]
+  AutoSklearn: 0.8922 [95% CI: 0.8459 - 0.9385]
+  CatBoost: 0.8968 [95% CI: 0.8539 - 0.9397]
+  EBM: 0.8949 [95% CI: 0.8515 - 0.9384]
+  LightGBM: 0.8821 [95% CI: 0.8338 - 0.9303]
+  XGBoost: 0.8757 [95% CI: 0.8265 - 0.9250]
+
+Ranking Summary for auc_ovo (average ranks):
+  CatBoost: 2.350
+  EBM: 2.650
+  AutoSklearn: 3.017
+  LightGBM: 3.800
+  AutoGluon: 4.050
+  XGBoost: 5.133
+
+Friedman test results:
+  Statistic: 46.2019
+  p-value: 0.000000
+  Result: Significant differences detected (p < 0.05)
+  Critical difference plot saved as: stat_results/critical_difference_auc_ovo.png
+  Performance data saved to: stat_results/performance_scores_auc_ovo.csv
+  Ranking data saved to: stat_results/performance_ranks_auc_ovo.csv
+
+============================================================
+STATISTICAL ANALYSIS FOR CROSS_ENTROPY
+============================================================
+
+Performance Summary for cross_entropy:
+       AutoGluon  AutoSklearn   CatBoost        EBM   LightGBM    XGBoost
+count  30.000000    30.000000  30.000000  30.000000  30.000000  30.000000
+mean    0.475082     0.720803   0.419440   0.392302   0.535313   0.494629
+std     0.384748     0.576360   0.337500   0.352564   0.468151   0.455581
+min     0.030897     0.103625   0.025661   0.000987   0.024482   0.030115
+25%     0.209213     0.358802   0.200520   0.158339   0.188394   0.184971
+50%     0.396539     0.520381   0.366247   0.344927   0.422010   0.391754
+75%     0.554772     1.047370   0.545012   0.508425   0.698722   0.630377
+max     1.841820     2.774578   1.766413   1.763359   2.117090   2.147884
+
+Performance Summary with 95% CI for cross_entropy:
+  AutoGluon: 0.4751 [95% CI: 0.3374 - 0.6128]
+  AutoSklearn: 0.7208 [95% CI: 0.5146 - 0.9271]
+  CatBoost: 0.4194 [95% CI: 0.2987 - 0.5402]
+  EBM: 0.3923 [95% CI: 0.2661 - 0.5185]
+  LightGBM: 0.5353 [95% CI: 0.3678 - 0.7028]
+  XGBoost: 0.4946 [95% CI: 0.3316 - 0.6577]
+
+Ranking Summary for cross_entropy (average ranks):
+  CatBoost: 2.400
+  EBM: 2.400
+  AutoGluon: 3.533
+  XGBoost: 3.733
+  LightGBM: 4.033
+  AutoSklearn: 4.900
+
+Friedman test results:
+  Statistic: 40.4571
+  p-value: 0.000000
+  Result: Significant differences detected (p < 0.05)
+  Critical difference plot saved as: stat_results/critical_difference_cross_entropy.png
+  Performance data saved to: stat_results/performance_scores_cross_entropy.csv
+  Ranking data saved to: stat_results/performance_ranks_cross_entropy.csv
+
+============================================================
+STATISTICAL ANALYSIS FOR TUNING_TIME
+============================================================
+
+Performance Summary for tuning_time:
+        AutoGluon  AutoSklearn   CatBoost          EBM   LightGBM    XGBoost
+count   30.000000    30.000000  30.000000    30.000000  30.000000  30.000000
+mean    70.355940  1260.439557   4.897659   304.426294   2.914903   2.615380
+std     83.897363  1081.938307  10.332541  1201.561527   5.029584   5.502678
+min     29.025055   596.896849   0.408146     4.099428   0.276004   0.264572
+25%     34.190121   614.065225   1.199237    10.421206   0.545095   0.420320
+50%     40.434426   623.323673   1.696139    20.569628   0.982353   0.689254
+75%     51.936218  2421.798218   2.561383    60.336251   2.488620   1.438430
+max    440.319895  3039.263195  47.547190  6464.742813  25.304016  27.281430
+
+Performance Summary with 95% CI for tuning_time:
+  AutoGluon: 70.3559 [95% CI: 40.3337 - 100.3782]
+  AutoSklearn: 1260.4396 [95% CI: 873.2729 - 1647.6062]
+  CatBoost: 4.8977 [95% CI: 1.2002 - 8.5951]
+  EBM: 304.4263 [95% CI: -125.5470 - 734.3996]
+  LightGBM: 2.9149 [95% CI: 1.1151 - 4.7147]
+  XGBoost: 2.6154 [95% CI: 0.6463 - 4.5845]
+
+Ranking Summary for tuning_time (average ranks):
+  XGBoost: 1.233
+  LightGBM: 2.100
+  CatBoost: 2.667
+  EBM: 4.333
+  AutoGluon: 4.733
+  AutoSklearn: 5.933
+
+Friedman test results:
+  Statistic: 136.5333
+  p-value: 0.000000
+  Result: Significant differences detected (p < 0.05)
+  Critical difference plot saved as: stat_results/critical_difference_tuning_time.png
+  Performance data saved to: stat_results/performance_scores_tuning_time.csv
+  Ranking data saved to: stat_results/performance_ranks_tuning_time.csv
+
+============================================================
+STATISTICAL ANALYSIS FOR TRAINING_TIME
+============================================================
+
+Performance Summary for training_time:
+       AutoGluon  AutoSklearn   CatBoost          EBM   LightGBM    XGBoost
+count  30.000000    30.000000  30.000000    30.000000  30.000000  30.000000
+mean   13.360635   250.673774   1.873316    60.913616   0.751307   0.517293
+std    16.686661   216.565378   4.510132   242.497122   1.691722   1.269933
+min     5.268038   118.658789   0.050358     0.513408   0.049803   0.029014
+25%     6.303347   121.567916   0.248588     1.840411   0.130816   0.055162
+50%     7.446799   122.757211   0.494009     3.675607   0.198506   0.150258
+75%     9.792902   482.556212   0.704401     7.785606   0.374527   0.233370
+max    87.174940   606.706892  20.576469  1304.635717   8.517165   6.813104
+
+Performance Summary with 95% CI for training_time:
+  AutoGluon: 13.3606 [95% CI: 7.3894 - 19.3319]
+  AutoSklearn: 250.6738 [95% CI: 173.1768 - 328.1707]
+  CatBoost: 1.8733 [95% CI: 0.2594 - 3.4872]
+  EBM: 60.9136 [95% CI: -25.8629 - 147.6901]
+  LightGBM: 0.7513 [95% CI: 0.1459 - 1.3567]
+  XGBoost: 0.5173 [95% CI: 0.0629 - 0.9717]
+
+Ranking Summary for training_time (average ranks):
+  XGBoost: 1.300
+  LightGBM: 2.067
+  CatBoost: 2.767
+  EBM: 4.167
+  AutoGluon: 4.767
+  AutoSklearn: 5.933
+
+Friedman test results:
+  Statistic: 132.0190
+  p-value: 0.000000
+  Result: Significant differences detected (p < 0.05)
+  Critical difference plot saved as: stat_results/critical_difference_training_time.png
+  Performance data saved to: stat_results/performance_scores_training_time.csv
+  Ranking data saved to: stat_results/performance_ranks_training_time.csv
+
+============================================================
+STATISTICAL ANALYSIS FOR PREDICTION_TIME
+============================================================
+
+Performance Summary for prediction_time:
+       AutoGluon  AutoSklearn   CatBoost        EBM   LightGBM    XGBoost
+count  30.000000    30.000000  30.000000  30.000000  30.000000  30.000000
+mean    0.034857     0.458524   0.004844   0.004876   0.008460   0.002085
+std     0.044518     0.314673   0.009513   0.017721   0.009752   0.001125
+min     0.003785     0.094055   0.000596   0.000286   0.002366   0.000895
+25%     0.009503     0.255147   0.001124   0.000542   0.003143   0.001466
+50%     0.022732     0.384595   0.001554   0.000800   0.004206   0.001716
+75%     0.038077     0.570611   0.003077   0.001316   0.006720   0.002347
+max     0.197074     1.428590   0.045999   0.097122   0.039163   0.006431
+
+Performance Summary with 95% CI for prediction_time:
+  AutoGluon: 0.0349 [95% CI: 0.0189 - 0.0508]
+  AutoSklearn: 0.4585 [95% CI: 0.3459 - 0.5711]
+  CatBoost: 0.0048 [95% CI: 0.0014 - 0.0082]
+  EBM: 0.0049 [95% CI: -0.0015 - 0.0112]
+  LightGBM: 0.0085 [95% CI: 0.0050 - 0.0119]
+  XGBoost: 0.0021 [95% CI: 0.0017 - 0.0025]
+
+Ranking Summary for prediction_time (average ranks):
+  EBM: 1.200
+  XGBoost: 2.400
+  CatBoost: 2.533
+  LightGBM: 3.867
+  AutoGluon: 5.000
+  AutoSklearn: 6.000
+
+Friedman test results:
+  Statistic: 137.7333
+  p-value: 0.000000
+  Result: Significant differences detected (p < 0.05)
+  Critical difference plot saved as: stat_results/critical_difference_prediction_time.png
+  Performance data saved to: stat_results/performance_scores_prediction_time.csv
+  Ranking data saved to: stat_results/performance_ranks_prediction_time.csv
+
+============================================================
+STATISTICAL ANALYSIS FOR TOTAL_TIME
+============================================================
+
+Performance Summary for total_time:
+       AutoGluon  AutoSklearn   CatBoost          EBM   LightGBM    XGBoost
+count  30.000000    30.000000  30.000000    30.000000  30.000000  30.000000
+mean   14.070322   252.086961   1.900680    61.608880   0.789944   0.536093
+std    16.779448   216.387765   4.539803   242.360524   1.730028   1.281361
+min     5.804387   119.378431   0.058798     0.774612   0.063958   0.036091
+25%     6.837195   122.812270   0.256510     1.952937   0.142052   0.060829
+50%     8.086059   124.663746   0.502572     3.934473   0.212500   0.161553
+75%    10.386417   484.358837   0.723860     8.876038   0.396627   0.252508
+max    88.063386   607.851762  20.702250  1304.700409   8.692071   6.869776
+
+Performance Summary with 95% CI for total_time:
+  AutoGluon: 14.0703 [95% CI: 8.0659 - 20.0748]
+  AutoSklearn: 252.0870 [95% CI: 174.6536 - 329.5203]
+  CatBoost: 1.9007 [95% CI: 0.2761 - 3.5252]
+  EBM: 61.6089 [95% CI: -25.1187 - 148.3365]
+  LightGBM: 0.7899 [95% CI: 0.1709 - 1.4090]
+  XGBoost: 0.5361 [95% CI: 0.0776 - 0.9946]
+
+Ranking Summary for total_time (average ranks):
+  XGBoost: 1.267
+  LightGBM: 2.067
+  CatBoost: 2.733
+  EBM: 4.233
+  AutoGluon: 4.767
+  AutoSklearn: 5.933
+
+Friedman test results:
+  Statistic: 134.5143
+  p-value: 0.000000
+  Result: Significant differences detected (p < 0.05)
+  Critical difference plot saved as: stat_results/critical_difference_total_time.png
+  Performance data saved to: stat_results/performance_scores_total_time.csv
+  Ranking data saved to: stat_results/performance_ranks_total_time.csv
+
+📊 Creating visualizations...
+
+============================================================
+OVERALL PERFORMANCE SUMMARY
+============================================================
+
+Mean Performance Across All Metrics:
+                 AutoGluon  AutoSklearn  CatBoost       EBM  LightGBM  XGBoost
+accuracy            0.8260       0.8389    0.8400    0.8377    0.8301   0.8266
+auc_ovo             0.8834       0.8922    0.8968    0.8949    0.8821   0.8757
+cross_entropy       0.4751       0.7208    0.4194    0.3923    0.5353   0.4946
+tuning_time        70.3559    1260.4396    4.8977  304.4263    2.9149   2.6154
+training_time      13.3606     250.6738    1.8733   60.9136    0.7513   0.5173
+prediction_time     0.0349       0.4585    0.0048    0.0049    0.0085   0.0021
+total_time         14.0703     252.0870    1.9007   61.6089    0.7899   0.5361
+
+Mean Performance with 95% CI Across All Metrics:
+                                  AutoGluon                     AutoSklearn                CatBoost                            EBM                LightGBM                 XGBoost
+accuracy             0.8260 [0.7639-0.8882]          0.8389 [0.7761-0.9018]  0.8400 [0.7809-0.8991]         0.8377 [0.7778-0.8977]  0.8301 [0.7671-0.8931]  0.8266 [0.7650-0.8883]
+auc_ovo              0.8834 [0.8372-0.9297]          0.8922 [0.8459-0.9385]  0.8968 [0.8539-0.9397]         0.8949 [0.8515-0.9384]  0.8821 [0.8338-0.9303]  0.8757 [0.8265-0.9250]
+cross_entropy        0.4751 [0.3374-0.6128]          0.7208 [0.5146-0.9271]  0.4194 [0.2987-0.5402]         0.3923 [0.2661-0.5185]  0.5353 [0.3678-0.7028]  0.4946 [0.3316-0.6577]
+tuning_time      70.3559 [40.3337-100.3782]  1260.4396 [873.2729-1647.6062]  4.8977 [1.2002-8.5951]  304.4263 [-125.5470-734.3996]  2.9149 [1.1151-4.7147]  2.6154 [0.6463-4.5845]
+training_time      13.3606 [7.3894-19.3319]    250.6738 [173.1768-328.1707]  1.8733 [0.2594-3.4872]    60.9136 [-25.8629-147.6901]  0.7513 [0.1459-1.3567]  0.5173 [0.0629-0.9717]
+prediction_time      0.0349 [0.0189-0.0508]          0.4585 [0.3459-0.5711]  0.0048 [0.0014-0.0082]        0.0049 [-0.0015-0.0112]  0.0085 [0.0050-0.0119]  0.0021 [0.0017-0.0025]
+total_time         14.0703 [8.0659-20.0748]    252.0870 [174.6536-329.5203]  1.9007 [0.2761-3.5252]    61.6089 [-25.1187-148.3365]  0.7899 [0.1709-1.4090]  0.5361 [0.0776-0.9946]
+
+Average Rankings Across All Metrics:
+                 AutoGluon  AutoSklearn  CatBoost  EBM  LightGBM  XGBoost
+accuracy               6.0          2.0       1.0  3.0       4.0      5.0
+auc_ovo                4.0          3.0       1.0  2.0       5.0      6.0
+cross_entropy          3.0          6.0       2.0  1.0       5.0      4.0
+tuning_time            4.0          6.0       3.0  5.0       2.0      1.0
+training_time          4.0          6.0       3.0  5.0       2.0      1.0
+prediction_time        5.0          6.0       2.0  3.0       4.0      1.0
+total_time             4.0          6.0       3.0  5.0       2.0      1.0
+
+Overall Average Ranking (lower is better):
+  CatBoost: 2.14
+  XGBoost: 2.71
+  EBM: 3.43
+  LightGBM: 3.43
+  AutoGluon: 4.29
+  AutoSklearn: 5.00
+
+Summary files saved:
+  stat_results/performance_summary_all_metrics.csv
+  stat_results/performance_summary_with_ci.csv
+  stat_results/ranks_summary_all_metrics.csv
+  stat_results/overall_average_ranks.csv
+
+============================================================
+DATASET-WISE ANALYSIS
+============================================================
+
+Best model per dataset (based on accuracy):
+  dataset_1049_pc4: XGBoost (0.9157)
+  dataset_1050_pc3: LightGBM (0.9022)
+  dataset_1063_kc2: AutoGluon (0.8575)
+  dataset_1068_pc1: AutoSklearn (0.9446)
+  dataset_11_balance-scale: AutoSklearn (0.9840)
+  dataset_12_mfeat-factors: EBM (0.9757)
+  dataset_1462_banknote-authentication: EBM (1.0000)
+  dataset_1464_blood-transfusion-service-center: CatBoost (0.7974)
+  dataset_1468_cnae-9: AutoSklearn (0.9286)
+  dataset_1480_ilpd: CatBoost (0.7402)
+  dataset_1494_qsar-biodeg: CatBoost (0.8766)
+  dataset_1501_semeion: EBM (0.9471)
+  dataset_1510_wdbc: EBM (0.9723)
+  dataset_15_breast-w: CatBoost (0.9775)
+  dataset_188_eucalyptus: LightGBM (0.6563)
+  dataset_23381_dresses-sales: EBM (0.6086)
+  dataset_23_cmc: CatBoost (0.5626)
+  dataset_29_credit-approval: CatBoost (0.8883)
+  dataset_307_vowel: LightGBM (0.9250)
+  dataset_31_credit-g: CatBoost (0.7714)
+  dataset_37_diabetes: CatBoost (0.7878)
+  dataset_40966_MiceProtein: AutoSklearn (0.9802)
+  dataset_40975_car: AutoSklearn (0.9710)
+  dataset_40982_steel-plates-fault: LightGBM (0.7975)
+  dataset_40994_climate-model-simulation-crashes: EBM (0.9445)
+  dataset_458_analcatdata_authorship: EBM (0.9966)
+  dataset_469_analcatdata_dmft: CatBoost (0.2191)
+  dataset_50_tic-tac-toe: CatBoost (0.9910)
+  dataset_54_vehicle: AutoSklearn (0.8074)
+  dataset_6332_cylinder-bands: CatBoost (0.8147)
+
+Win counts across datasets:
+  CatBoost: 11 wins
+  EBM: 7 wins
+  AutoSklearn: 6 wins
+  LightGBM: 4 wins
+  XGBoost: 1 wins
+  AutoGluon: 1 wins
+
+✅ Statistical analysis completed!
+📁 Check the 'stat_results' folder for all generated CSV files and PNG plots.

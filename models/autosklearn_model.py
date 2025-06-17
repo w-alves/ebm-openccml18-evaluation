@@ -20,10 +20,10 @@ class AutoSklearnModel(BaseModel):
     def _create_model(self, **params):
         """Create Auto-sklearn classifier instance"""
         default_params = {
-            'tmp_folder': None,  # Use default temp folder
-            'delete_tmp_folder_after_terminate': True,
-            'disable_evaluator_output': True,
             'seed': self.random_state
+            ,'time_left_for_this_task': 120  # 5 minutes default
+            , 'per_run_time_limit': 30  # 30 seconds per model
+            , 'n_jobs': -1  # Use all available cores
         }
         default_params.update(params)
         
@@ -31,64 +31,11 @@ class AutoSklearnModel(BaseModel):
     
     def _get_param_grid(self):
         """Get hyperparameter grid for Auto-sklearn tuning"""
-        # Auto-sklearn doesn't need traditional hyperparameter tuning
-        # Instead, we vary the time budgets and ensemble configurations
-        param_grid = [
-            {
-                'time_left_for_this_task': 180,  # 3 minutes
-                'per_run_time_limit': 20,
-                'ensemble_size': 5,
-                'ensemble_nbest': 5
-            },
-            {
-                'time_left_for_this_task': 300,  # 5 minutes
-                'per_run_time_limit': 30,
-                'ensemble_size': 10,
-                'ensemble_nbest': 10
-            },
-            {
-                'time_left_for_this_task': 600,  # 10 minutes
-                'per_run_time_limit': 60,
-                'ensemble_size': 15,
-                'ensemble_nbest': 15
-            },
-            {
-                'time_left_for_this_task': 240,  # 4 minutes
-                'per_run_time_limit': 30,
-                'ensemble_size': 8,
-                'ensemble_nbest': 8
-            }
-        ]
-        
-        logger.info(f"Generated {len(param_grid)} Auto-sklearn configurations")
-        return param_grid
-    
-    def tune(self, X_train, y_train, cv_folds=5, **kwargs):
-        """
-        Tune Auto-sklearn (simplified version since it auto-tunes internally)
-        
-        Args:
-            X_train: Training features
-            y_train: Training targets
-            cv_folds: Number of CV folds (not used for auto-sklearn)
-            **kwargs: Additional tuning parameters
-        """
-        import time
-        start_time = time.perf_counter()
-        
-        # For Auto-sklearn, we just select the best configuration from our grid
-        # based on a quick validation
-        param_grid = self._get_param_grid()
-        
-        # For simplicity, use the default configuration (index 1)
-        # In a full implementation, you might want to try multiple configurations
-        self.best_params = param_grid[1]  # 5-minute configuration
-        
-        self.tuning_time = time.perf_counter() - start_time
-        
-        logger.info(f"{self.name} configuration selected in {self.tuning_time:.2f}s")
-        logger.info(f"Selected config: {self.best_params}")
-    
+        # Auto-sklearn does not require manual parameter grid definition
+        # It automatically searches through a large space of models and hyperparameters
+        logger.info("Auto-sklearn will automatically search for optimal hyperparameters")
+        return [{}]
+     
     def fit(self, X_train, y_train, **kwargs):
         """
         Fit Auto-sklearn classifier
@@ -102,10 +49,11 @@ class AutoSklearnModel(BaseModel):
         start_time = time.perf_counter()
         
         if self.model is None:
-            self.model = self._create_model(**self.best_params)
+            self.model = self._create_model()
         
         try:
-            # Auto-sklearn fit
+            # Auto-sklearn fit - it will automatically perform hyperparameter optimization
+            logger.info(f"Starting Auto-sklearn training with automated hyperparameter optimization...")
             self.model.fit(X_train, y_train)
             self.is_fitted = True
             
@@ -116,19 +64,7 @@ class AutoSklearnModel(BaseModel):
                 logger.warning(f"Refit failed for {self.name}: {str(e)}")
                 
         except Exception as e:
-            logger.error(f"Failed to fit {self.name}: {str(e)}")
-            # Create a simple fallback model
-            from sklearn.ensemble import RandomForestClassifier
-            self.model = RandomForestClassifier(
-                n_estimators=100, 
-                random_state=self.random_state
-            )
-            self.model.fit(X_train, y_train)
-            self.is_fitted = True
-            logger.warning(f"Using RandomForest fallback for {self.name}")
-        
-        self.training_time = time.perf_counter() - start_time
-        logger.info(f"{self.name} training completed in {self.training_time:.2f}s")
+            raise RuntimeError(f"Auto-sklearn fitting failed: {str(e)}")
     
     def predict(self, X_test):
         """Make predictions on test data"""

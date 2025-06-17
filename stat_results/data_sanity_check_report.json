@@ -1,0 +1,42 @@
+{
+  "total_combinations": 180,
+  "missing_metrics": {},
+  "nan_issues": {},
+  "completeness": {
+    "accuracy": {
+      "valid_count": 180,
+      "total_count": 180,
+      "percentage": 100.0
+    },
+    "auc_ovo": {
+      "valid_count": 180,
+      "total_count": 180,
+      "percentage": 100.0
+    },
+    "cross_entropy": {
+      "valid_count": 180,
+      "total_count": 180,
+      "percentage": 100.0
+    },
+    "tuning_time": {
+      "valid_count": 180,
+      "total_count": 180,
+      "percentage": 100.0
+    },
+    "training_time": {
+      "valid_count": 180,
+      "total_count": 180,
+      "percentage": 100.0
+    },
+    "prediction_time": {
+      "valid_count": 180,
+      "total_count": 180,
+      "percentage": 100.0
+    },
+    "total_time": {
+      "valid_count": 180,
+      "total_count": 180,
+      "percentage": 100.0
+    }
+  }
+}

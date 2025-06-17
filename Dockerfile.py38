@@ -1,0 +1,36 @@
+# Use Python 3.8 slim image for Auto-sklearn
+FROM python:3.8-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies (Auto-sklearn needs more build tools)
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    libc6-dev \
+    libffi-dev \
+    libssl-dev \
+    curl \
+    build-essential \
+    swig \
+    libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy Python 3.8 requirements first (for better Docker caching)
+COPY requirements_py38_gcp.txt .
+RUN pip install --no-cache-dir -r requirements_py38_gcp.txt
+
+# Copy application code
+COPY *.py ./
+COPY models/ ./models/
+
+# Create necessary directories
+RUN mkdir -p /app/logs /app/results /app/data
+
+# Set environment variables
+ENV PYTHONPATH=/app
+ENV PYTHONUNBUFFERED=1
+
+# Default command
+CMD ["python", "cloud_experiment_runner.py"] 

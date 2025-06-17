@@ -35,86 +35,20 @@ class AutoGluonModel(BaseModel):
         self.temp_dir = tempfile.mkdtemp(prefix='autogluon_')
         
         default_params = {
-            'path': self.temp_dir,
-            'eval_metric': 'accuracy',
-            'verbosity': 0,
-            'sample_weight': None,
-            'weight_evaluation': False,
         }
         default_params.update(params)
         
         return TabularPredictor(
             label=self.target_column,
-            **default_params
         )
     
     def _get_param_grid(self):
         """Get hyperparameter grid for AutoGluon tuning"""
-        # AutoGluon doesn't need traditional hyperparameter tuning
-        # Instead, we vary the time budgets and quality settings
-        param_grid = [
-            {
-                'time_limit': 180,  # 3 minutes
-                'presets': 'medium_quality_faster_train',
-                'num_bag_folds': 3,
-                'num_stack_levels': 1
-            },
-            {
-                'time_limit': 300,  # 5 minutes
-                'presets': 'good_quality_faster_inference',
-                'num_bag_folds': 5,
-                'num_stack_levels': 1
-            },
-            {
-                'time_limit': 600,  # 10 minutes
-                'presets': 'high_quality',
-                'num_bag_folds': 8,
-                'num_stack_levels': 2
-            },
-            {
-                'time_limit': 240,  # 4 minutes
-                'presets': 'best_quality',
-                'num_bag_folds': 5,
-                'num_stack_levels': 1
-            }
-        ]
-        
-        logger.info(f"Generated {len(param_grid)} AutoGluon configurations")
-        return param_grid
-    
-    def tune(self, X_train, y_train, cv_folds=5, **kwargs):
-        """
-        Tune AutoGluon (simplified version since it auto-tunes internally)
-        
-        Args:
-            X_train: Training features
-            y_train: Training targets
-            cv_folds: Number of CV folds (not used for AutoGluon)
-            **kwargs: Additional tuning parameters
-        """
-        import time
-        start_time = time.perf_counter()
-        
-        # For AutoGluon, we just select the best configuration from our grid
-        param_grid = self._get_param_grid()
-        
-        # Select configuration based on dataset size
-        n_samples = len(X_train)
-        if n_samples < 1000:
-            # Small dataset - use faster configuration
-            self.best_params = param_grid[0]  # 3-minute configuration
-        elif n_samples < 5000:
-            # Medium dataset - use balanced configuration
-            self.best_params = param_grid[1]  # 5-minute configuration
-        else:
-            # Large dataset - use quality configuration
-            self.best_params = param_grid[1]  # Still 5-minute to keep reasonable time
-        
-        self.tuning_time = time.perf_counter() - start_time
-        
-        logger.info(f"{self.name} configuration selected in {self.tuning_time:.2f}s")
-        logger.info(f"Selected config: {self.best_params}")
-    
+        # AutoGluon does not require manual parameter grid definition
+        # It automatically searches through a large space of models and hyperparameters
+        logger.info("AutoGluon will automatically search for optimal hyperparameters")
+        return [{"random_state": [self.random_state],}]
+
     def fit(self, X_train, y_train, **kwargs):
         """
         Fit AutoGluon predictor
@@ -140,32 +74,13 @@ class AutoGluonModel(BaseModel):
             if self.model is None:
                 self.model = self._create_model()
             
-            # Extract fit parameters
-            fit_params = {
-                'time_limit': self.best_params.get('time_limit', 300),
-                'presets': self.best_params.get('presets', 'medium_quality_faster_train'),
-                'num_bag_folds': self.best_params.get('num_bag_folds', 5),
-                'num_stack_levels': self.best_params.get('num_stack_levels', 1),
-                'verbosity': 0
-            }
-            
-            # Fit the model
-            self.model.fit(train_data, **fit_params)
+            # Fit the model - AutoGluon will automatically perform hyperparameter optimization
+            logger.info(f"Starting AutoGluon training with automated hyperparameter optimization...")
+            self.model.fit(train_data)
             self.is_fitted = True
             
         except Exception as e:
-            logger.error(f"Failed to fit {self.name}: {str(e)}")
-            # Create a simple fallback model
-            from sklearn.ensemble import RandomForestClassifier
-            self.model = RandomForestClassifier(
-                n_estimators=100, 
-                random_state=self.random_state
-            )
-            if not isinstance(X_train, np.ndarray):
-                X_train = X_train.values
-            self.model.fit(X_train, y_train)
-            self.is_fitted = True
-            logger.warning(f"Using RandomForest fallback for {self.name}")
+            raise RuntimeError(f"AutoGluon training failed: {str(e)}")
         
         self.training_time = time.perf_counter() - start_time
         logger.info(f"{self.name} training completed in {self.training_time:.2f}s")

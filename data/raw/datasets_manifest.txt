@@ -1,10 +1,37 @@
 OpenML-CC18 Datasets (30 smallest by instance count)
 ==================================================
-Total datasets: 3
-Successfully downloaded: 3
+Total datasets: 30
+Successfully downloaded: 30
 Failed downloads: 0
 
 Selected dataset IDs (sorted by size):
 - 23381
 - 1063
 - 6332
+- 40994
+- 1510
+- 1480
+- 11
+- 29
+- 15
+- 188
+- 1464
+- 37
+- 469
+- 458
+- 54
+- 50
+- 307
+- 31
+- 1494
+- 1468
+- 40966
+- 1068
+- 1462
+- 1049
+- 23
+- 1050
+- 1501
+- 40975
+- 40982
+- 12

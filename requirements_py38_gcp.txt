@@ -1,3 +1,8 @@
+# GCP Dependencies
+google-cloud-storage>=2.10.0
+google-cloud-run>=0.10.0
+google-cloud-core>=2.3.0
+
 # Requirements for Python 3.8 environment (Auto-sklearn)
 auto-sklearn
 scikit-learn
